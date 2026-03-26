@@ -1,0 +1,11 @@
+**/.DS_Store
+/core/fp-lib-table
+/core/fp-info-cache
+/core/audio_lab.kicad_prl
+/core/audio_lab-backups/
+/core/gerber/
+/plug/fp-lib-table
+/plug/fp-info-cache
+/plug/plug.kicad_prl
+/plug/plug-backups/
+/plug/gerber/

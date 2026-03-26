@@ -1,0 +1,59 @@
+(kicad_sch
+	(version 20250114)
+	(generator "eeschema")
+	(generator_version "9.0")
+	(uuid "38008a26-bb94-4057-a197-3d26cc435978")
+	(paper "A4")
+	(lib_symbols)
+	(text "2026-03-18"
+		(exclude_from_sim no)
+		(at 147.32 118.872 0)
+		(effects
+			(font
+				(face "Courier New")
+				(size 5.08 5.08)
+				(thickness 0.508)
+				(bold yes)
+				(color 0 0 0 1)
+			)
+		)
+		(uuid "5406f030-18d7-48e9-974e-0998c451d779")
+	)
+	(text "Schematic Document\n"
+		(exclude_from_sim no)
+		(at 147.32 97.536 0)
+		(effects
+			(font
+				(face "Times New Roman")
+				(size 6.35 6.35)
+				(color 0 0 0 1)
+			)
+		)
+		(uuid "68fda99a-cd6f-40d2-9e06-d63cc8a35415")
+	)
+	(text "REV: 0.2"
+		(exclude_from_sim no)
+		(at 147.32 129.286 0)
+		(effects
+			(font
+				(face "Courier New")
+				(size 5.08 5.08)
+				(bold yes)
+				(color 0 0 0 1)
+			)
+		)
+		(uuid "8209d00a-02b3-4584-8a3c-17be57bdee2a")
+	)
+	(text "Audio Lab Project"
+		(exclude_from_sim no)
+		(at 147.32 81.28 0)
+		(effects
+			(font
+				(face "Times New Roman")
+				(size 8.89 8.89)
+				(color 0 0 0 1)
+			)
+		)
+		(uuid "8f0d2495-372a-4577-9d8e-4b6cd2fce27d")
+	)
+)
