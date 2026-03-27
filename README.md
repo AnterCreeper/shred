@@ -1,28 +1,32 @@
-# Electric-guitar Audio eFfectX
+# SHRED: (S)ystem for (H)igh-performance (R)eal-time (E)lectric guitar (D)igital effects
 
-If any questions, welcome for Issues & PRs
+If you have any questions, feel free to open Issues & PRs.
 
-**WARNING! This Project is not been fully long-term productive tested and without warranty of any kind, use at your own risk!**
+**WARNING! This project has not been fully tested in long-term production environments and is provided without warranty of any kind. Use at your own risk!**
 
 ## License
 
-This project is licensed under the LGPL-2.1-or-later license. **DO NOT** download or clone this project until you have read and agree the LICENSE.
+This project is licensed under the LGPL-2.1-or-later license.
+
+**DO NOT** download or clone this project until you have read and agreed to the LICENSE.
 
 ## TODO
 
 1. plug subboard designs
 2. FPGA RTL integration
-3. controller firmwares
+3. controller firmware
 
 ## Overview
 
-This project is used to perform audio system for electric guitars, and consists of essential components, including the hardware(core and plug) with GERBER and schematics, digital logic designs, mechanicals of pickguard and firmware of low power microcontroller which provide HMI and system controls. The TFT screen is not included, which is from Waveshare [Click here](https://www.waveshare.net/wiki/1.9inch_LCD_Module) and would be very easy to fetch.
+This project implements an audio system for electric guitars and consists of essential components, including the hardware (core and plug) with Gerber files and schematics, digital logic designs, mechanical designs for the pickguard, and firmware for a low-power microcontroller that provides HMI and system controls.
 
-![PCB Preview Picture](https://github.com/antercreeper/gafx/blob/main/core_preview.jpg?raw=true)
+The TFT screen is not included, which is from Waveshare ([Click here](https://www.waveshare.net/wiki/1.9inch_LCD_Module)) and would be easy to obtain.
+
+![PCB Preview Picture](https://github.com/antercreeper/shred/blob/main/core_preview.jpg?raw=true)
 
 ## Functions
 
-- Audio Record & PlayBack (SDCard)
+- Audio Record & Playback (SD Card)
 - Audio Mixer
 - USB Audio Input and Output
 - Wireless BLE Real-time Audio Monitor
@@ -30,44 +34,44 @@ This project is used to perform audio system for electric guitars, and consists 
 
 ## Directory
 
-#### Core
+### Core
 
-This directory consists of PCB designs(KiCad) of main board, which take the most functions. It includes battery management(TI `BQ25601` charger with `TPD2S300` for Type-C PD high-voltage fast charge, and TI `BQ27720` energy guage), system microcontroller(WCH `CH32X035`), FPGA unit(Gowin `Tang Primer 25k`), and the audios(ADI/Maxim `MAX9850` I2S DAC + Onsemi `FAN3852` AFE+ADC to PDM, and Skyworks/Silabs `Si5351` for clock). Besides, this system takes a BLE module(Nordic `nRF5340`) to provide ultra-low latency LE Audio streaming ability.
+This directory contains PCB designs (KiCad) for the main board, which implements most functions. It includes battery management (TI `BQ25601` charger with `TPD2S300` for Type-C PD high-voltage fast charging, and TI `BQ27720` energy gauge), system microcontroller (WCH `CH32X035`), FPGA unit (Gowin `Tang Primer 25K`), and the audio subsystem (ADI/Maxim `MAX9850` I2S DAC + onsemi `FAN3852` AFE+ADC to PDM, and Skyworks/Silicon Labs `Si5351` for clock generation). In addition, this system includes a BLE module (Nordic `nRF5340`) to provide ultra-low latency LE Audio streaming capability.
 
-The power rails are carefully designed to provide long experience endurance. The system occupied several load switches(MPS `MP5095` and Diode `AP2151`) and ultra-low quiescent regulators(TI `TPS62743` and `TPS7A20`), and we can shutdown or set specific components(keys and screen, the audio system, flash storage, bluetooth) to low power states.
+The power rails are carefully designed to provide long battery life. The system employs several load switches (MPS `MP5095` and Diodes `AP2151`) and ultra-low quiescent current regulators (TI `TPS62743` and `TPS7A20`), allowing specific components (keys and screen, audio system, flash storage, Bluetooth) to be shut down or set to low-power states.
 
-The dual magnetic pickups are attached via IPEX-4(need some solder works to modify the connect wires), which would provide low noise pure raw signals.
+The dual magnetic pickups are connected via IPEX-4 (some soldering work is required to modify the connection wires), which provides low-noise, pure raw signals.
 
-#### Plug
+### Plug
 
-This directory consists of PCB designs(KiCad) of plug subboard, which consists of `audio jack`, `microSD slot`, `usb-c receptacle`, `charge indicator` and `ambient light sensor`.
-Output
-#### RTL
+This directory contains PCB designs (KiCad) for the plug subboard, which includes an `audio jack`, `microSD slot`, `USB-C receptacle`, `charge indicator`, and `ambient light sensor`.
 
-This directory consists of the audio process logics:
-- core processor
-- audio synthesizer
-- flac encoder & decoder
-- audio i/o interface
-- usb device interface
-- i2c device interface
-- sd host controller interface
+### RTL
 
-#### Controller
+This directory contains the audio processing logic:
+- Core processor
+- Audio synthesizer
+- FLAC encoder & decoder
+- Audio I/O interface
+- USB device interface
+- I2C device interface
+- SD host controller interface
 
-This directory consists of the system controller firmwares, which setup every device, sense the system states, render the HMI and react to user input events.
+### Controller
 
-#### LE-Audio
+This directory contains the system controller firmware, which sets up every device, monitors system states, renders the HMI, and reacts to user input events.
 
-This directory consists of the BLE module firmware subproject from another individual repository. It would scan, connect and pair with earbuds, and then perform real-time audio streaming(LC3). This module acts as a device(system controller host) with standard AT interface over UART.
+### LE-Audio
 
-#### Others
+This directory contains the BLE module firmware subproject from a separate repository. It scans, connects, and pairs with earbuds, and then performs real-time audio streaming (LC3). This module acts as a peripheral to the system controller, communicating via a standard AT interface over UART.
 
-Misc files under the root:
-- pickguard.dxf: Pickguard CAD designs.
+### Others
+
+Miscellaneous files under the root:
+- `pickguard.dxf`: Pickguard CAD designs.
 
 ## Usage
 
-**This Section is W.I.P and would be completed in the future.**
+**This section is W.I.P. and will be completed in the future.**
 
-[![Star History Chart](https://api.star-history.com/svg?repos=antercreeper/gafx&type=date&legend=top-left)](https://www.star-history.com/#antercreeper/gafx&type=date&legend=top-left)
+[![Star History Chart](https://api.star-history.com/svg?repos=antercreeper/shred&type=date&legend=top-left)](https://www.star-history.com/#antercreeper/shred&type=date&legend=top-left)
