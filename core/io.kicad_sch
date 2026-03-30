@@ -1605,7 +1605,7 @@
 		)
 		(uuid "81c36b16-3282-49ba-8122-6422c67b71e3")
 	)
-	(text "F2_IOB26A"
+	(text "F1_IOB26B"
 		(exclude_from_sim no)
 		(at 135.89 68.072 0)
 		(effects
@@ -1927,7 +1927,7 @@
 		)
 		(uuid "f41023e7-333c-46d4-b1c0-da97bd3458d9")
 	)
-	(text "F1_IOB26B"
+	(text "F2_IOB26A"
 		(exclude_from_sim no)
 		(at 135.89 74.422 0)
 		(effects

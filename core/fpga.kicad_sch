@@ -10091,16 +10091,6 @@
 		)
 		(uuid "532e7392-ac7b-4023-9090-3256a417781b")
 	)
-	(label "AUD_PDM_CLK"
-		(at 171.45 38.1 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left bottom)
-		)
-		(uuid "561f9d5d-4cde-441a-9b37-961f4eeecbcc")
-	)
 	(label "USB_P_PU"
 		(at 50.8 68.58 0)
 		(effects
@@ -10460,6 +10450,16 @@
 			(justify left bottom)
 		)
 		(uuid "9f8180f8-7b05-43d9-bfd8-cea0b611e157")
+	)
+	(label "AUD_PDM_CLK"
+		(at 171.45 35.56 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left bottom)
+		)
+		(uuid "a15c504f-cd1c-4c10-bc49-29a4fc319b89")
 	)
 	(label "L7_IOT19A_40P"
 		(at 36.83 73.66 0)
@@ -11008,17 +11008,6 @@
 		)
 		(uuid "8197bf98-ae24-4d56-8096-94802f52ecf7")
 	)
-	(hierarchical_label "AUD_PDM_DAT"
-		(shape input)
-		(at 186.69 35.56 0)
-		(effects
-			(font
-				(size 1.27 1.27)
-			)
-			(justify left)
-		)
-		(uuid "9c3710c5-dc3d-43c8-a0f3-46d69b392241")
-	)
 	(hierarchical_label "SD_DAT3"
 		(shape input)
 		(at 35.56 81.28 180)
@@ -11040,6 +11029,17 @@
 			(justify left)
 		)
 		(uuid "aa4ffb7d-6d5c-4ed0-beab-0b3d0d1b0ec6")
+	)
+	(hierarchical_label "AUD_PDM_DAT"
+		(shape input)
+		(at 186.69 38.1 0)
+		(effects
+			(font
+				(size 1.27 1.27)
+			)
+			(justify left)
+		)
+		(uuid "b3db1842-980c-46c2-b9c2-1fbff64ea2a9")
 	)
 	(hierarchical_label "SD_PWRON"
 		(shape output)
