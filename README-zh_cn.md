@@ -70,6 +70,8 @@
 
 根目录下的杂项文件：
 - `pickguard.dxf`：护板 CAD 设计文件。
+- `logo.jped`: `SHRED` Logo，由 Google NanoBanana 2 生成。
+- `logo.prompt`: Logo 生成提示词。
 
 ## 使用说明
 
